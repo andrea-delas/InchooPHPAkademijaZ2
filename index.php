@@ -1,4 +1,3 @@
-
 <?php
 $myArray = array(2,6,49,3,2,3,4,50,33,34,37,42,55,234,122);
 
@@ -29,7 +28,22 @@ foreach ($myArray as $key => $value) {
 }
 echo "Prvi veći parni broj: " . $nextNumber, "<br />";
 
-echo sqrt(sqrt(2));
+echo "<br>";
 
+
+$tableDimension = sqrt(max($myArray)) +1;
+
+echo "<table border =\"1\" style='border-collapse: collapse'>";  // izračun dimenzija tablice
+for ($row=1; $row <= $tableDimension; $row++) {
+    echo "<tr> \n";
+    for ($col=1; $col <= $tableDimension; $col++) {
+        $p = $col * $row;
+        echo "<td>$p</td> \n";
+    }
+    echo "</tr>";
+}
+echo "</table>";
 ?>
+
+
 
